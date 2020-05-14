@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "iemerger-webtool",
+  "description": "Web tool demonstrating import-export-merger",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch",
+    "watch": "webpack --watch --config webpack.dev.js"
+  },
+  "license": "No license",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "codemirror": "^5.53.2",
+    "import-export-merger": "file:..",
+    "prettier": "^2.0.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}

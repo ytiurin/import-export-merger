@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0.67rem;
+  font-size: 18px;
+}
+p {
+  margin: 0 0.67rem 0.67rem;
+}
+
+.CodeMirror {
+  flex: 1 0 0;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  flex-direction: column;
+}
+
+.all-panels {
+  display: flex;
+
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  width: 50%;
+
+  flex-direction: column;
+}
+
+.left-column {
+}
+
+.left-column .add-button {
+  flex-basis: 0;
+}
+
+.left-column .source-editors,
+.left-column .source-editors > div {
+  display: flex;
+
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.add-button {
+  line-height: 2rem;
+  text-align: center;
+}
+
+.editor-header {
+  background: #f3f3f3;
+  line-height: 2rem;
+  padding: 0 4px;
+}
+
+.error-panel {
+  display: none;
+  padding: 8px 4px;
+}
+
+.error-panel.error {
+  background-color: #fff0f0;
+  color: #ff3838;
+  display: block;
+}

@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "iemerger-cli-example",
+  "description": "Example of iemerger CLI usage",
+  "main": "index.js",
+  "scripts": {
+    "build:babel": "npx iemerger src | npx babel -f main.js -o main.js",
+    "build:prettier": "npx iemerger src | npx prettier --parser=babel > main.js",
+    "build:uglify": "npx iemerger src | npx uglifyjs -o main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "No license",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "import-export-merger": "file:..",
+    "prettier": "^2.0.5",
+    "uglify-js": "^3.9.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}

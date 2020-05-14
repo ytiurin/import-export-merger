@@ -1,0 +1,79 @@
+{
+  "name": "import-export-merger",
+  "version": "0.1.0",
+  "description": "Concatenate javascript files with imports/exports.",
+  "bin": {
+    "iemerger": "./bin/iemerger.js"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib --ignore \"src/**/*.test.js\"",
+    "lint": "eslint src --ignore-pattern \"src/**/*.test.js\"",
+    "test": "jest",
+    "watch": "babel src -d lib --watch --ignore \"src/**/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytiurin/import-export-merger.git"
+  },
+  "author": "Eugene Tiurin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ytiurin/import-export-merger/issues"
+  },
+  "homepage": "https://ytiurin.github.io/import-export-merger",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^7.0.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged && jest"
+    }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 11
+    },
+    "rules": {}
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "npm run lint"
+    ]
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "files": [
+    "bin",
+    "lib"
+  ]
+}
