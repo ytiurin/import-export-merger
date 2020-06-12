@@ -4,7 +4,7 @@
 
 [Try a web tool](https://ytiurin.github.io/import-export-merger/)
 
-_Merge javascript files with imports/exports into one function._ Made to pack code in one file, exculding external dependencies.
+_Merge javascript files with imports/exports into one function._ Made to pack code in one file, exculding external dependencies. This is an alternative to code bundling for small libraries.
 
 Having three files:
 
