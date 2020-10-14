@@ -1,4 +1,4 @@
-> This tool has a significant design drawback. It doesn't support import a variable by a reference. Still, functions imports work fine.
+> This tool has a significant design drawback. It doesn't support an import of variables by reference. Still, functions importing works fine.
 
 # import-export-merger
 
