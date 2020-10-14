@@ -194,7 +194,7 @@ const merge = pipe(
   compileModule,
   supplyExternals,
   makeModule,
-  makeUMD
+  makeUMDBody
 );
 ```
 
