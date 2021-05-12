@@ -22,7 +22,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "codemirror": "^5.53.2",
+    "codemirror": "^5.58.2",
     "import-export-merger": "file:..",
     "prettier": "^2.0.5"
   },
